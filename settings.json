@@ -1,0 +1,94 @@
+{
+    "explorer.compactFolders": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "typescript.inlayHints.enumMemberValues.enabled": true,
+    "[javascript]": {
+        "editor.tabSize": 4
+    },
+    "[typescript]": {
+        "editor.tabSize": 8
+    },
+    "editor.fastScrollSensitivity": 3,
+    "breadcrumbs.enabled": true,
+    "editor.bracketPairColorization.enabled": true,
+    "emmet.showSuggestionsAsSnippets": true,
+    "editor.snippetSuggestions": "bottom",
+    "prettier.tabWidth": 4,
+    "zenMode.hideTabs": false,
+    "editor.fontSize": 14,
+    "zenMode.fullScreen": false,
+    "zenMode.centerLayout": false,
+    "editor.minimap.enabled": false,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "zenMode.hideLineNumbers": false,
+    //vim config
+    "vim.normalModeKeyBindingsNonRecursive": [
+        /*
+            default:
+                          ↑
+                    ← h j k l →
+                        ↓
+            custom:
+                    Its really simple! "IJKL" is similar to "WASD"
+                    and I mapped "Insert" to "H".
+         */
+        {
+            "before": ["h"],
+            "after": ["j"]
+        },
+        {
+            "before": ["j"],
+            "after": ["h"]
+        },
+        {
+            "before": ["k"],
+            "after": ["j"]
+        },
+        {
+            "before": ["i"],
+            "after": ["k"]
+        },
+        {
+            "before": ["h"],
+            "after": ["i"]
+        }
+    ],
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    // vim requires line numbers to scroll
+    "files.trimTrailingWhitespace": true,
+    "workbench.tree.indent": 20,
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.editor.enablePreview": false,
+    "terminal.integrated.allowChords": false,
+    "terminal.integrated.profiles.osx": {
+        "super-fish": {
+            "path": "/opt/homebrew/bin/fish"
+        }
+    },
+    "terminal.integrated.defaultProfile.osx": "super-fish",
+    //copy text without whitespace
+    "editor.copyWithSyntaxHighlighting": true,
+    "files.associations": {
+        "*.css": "css",
+        "css": "css"
+    },
+    "[prisma]": {
+        "editor.defaultFormatter": "Prisma.prisma"
+    },
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "terminal.integrated.ignoreProcessNames": ["starship", "oh-my-posh", "bash", "zsh", "fish"],
+    "git.enableSmartCommit": true,
+    "prettier.printWidth": 150,
+    "git.confirmSync": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "[go]": {
+        "editor.defaultFormatter": "golang.go"
+    },
+    "[python]": {
+        "editor.formatOnType": true
+    }
+}
