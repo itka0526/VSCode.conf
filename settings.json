@@ -42,7 +42,19 @@
         /*
             Caps Lock + h for inserting a one character
         */
-        { "before": ["<C-h>"], "after": ["i", " ", "<ESC>", "r"] }
+        { "before": ["<C-h>"], "after": ["i", " ", "<ESC>", "r"] },
+        /*
+            Enter paste w/o moving cursor!
+        */
+        { "before": ["<Leader>", "p"], "after": ["p", "`", "["] },
+        /*
+            Stop highlight!
+        */
+        { "before": ["<Leader>", "/"], "commands": [":noh"], "silent": true },
+        /*
+            Add an empty line at cursor without leaving normal mode!
+        */
+        { "before": ["K"], "after": ["a", "<Enter>", "<ESC>"] }
     ],
 
     "vim.visualModeKeyBindingsNonRecursive": [
@@ -104,5 +116,6 @@
         "statusBar.background": "#5f0000",
         "statusBar.noFolderBackground": "#5f0000",
         "statusBar.debuggingBackground": "#5f0000"
-    }
+    },
+    "bracket-pair-colorizer-2.depreciation-notice": false
 }
