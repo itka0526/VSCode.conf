@@ -33,14 +33,114 @@
         "command": "workbench.action.quickOpenNavigateNext",
         "when": "inQuickOpen"
     },
+
+    // using IJKL + ALT to move arouind instead of arrow keys they are too hard to reach
     {
-        "key": "ctrl+i",
+        "key": "alt+i",
+        "command": "cursorUp",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+j",
+        "command": "cursorLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+k",
+        "command": "cursorDown",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+l",
+        "command": "cursorRight",
+        "when": "editorTextFocus"
+    },
+    // using IJKL + ALT + CMD to select code
+    {
+        "key": "alt+cmd+i",
+        "command": "cursorUpSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+j",
+        "command": "cursorLeftSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+k",
+        "command": "cursorDownSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+l",
+        "command": "cursorRightSelect",
+        "when": "editorTextFocus"
+    },
+    // move block of code up and down via IK + ctrl key
+    {
+        "key": "shift+alt+i",
         "command": "editor.action.moveLinesUpAction",
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+k",
+        "key": "shift+alt+k",
         "command": "editor.action.moveLinesDownAction",
         "when": "editorTextFocus"
+    },
+    // go to beginning/end of a word
+    {
+        "key": "alt+a",
+        "command": "cursorWordLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+d",
+        "command": "cursorWordRight",
+        "when": "editorTextFocus"
+    },
+    // go to beginning/end of a line
+    {
+        "key": "alt+q",
+        "command": "cursorHome",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+e",
+        "command": "cursorLineEnd",
+        "when": "editorTextFocus"
+    },
+    // select the beginning/end of a word
+    {
+        "key": "alt+cmd+a",
+        "command": "cursorWordLeftSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+d",
+        "command": "cursorWordRightSelect",
+        "when": "editorTextFocus"
+    },
+    // select the beginning/end of a line
+    {
+        "key": "alt+cmd+q",
+        "command": "cursorLineStartSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+cmd+e",
+        "command": "cursorLineEndSelect",
+        "when": "editorTextFocus"
+    },
+
+    {
+        "key": "alt+r",
+        "command": "deleteAllLeft",
+        "when": "textInputFocus && !editorReadonly"
+    },
+
+    // disable some stuff
+    {
+        "key": "cmd+j",
+        "command": "terminal.toggleVisibility"
     }
 ]

@@ -67,6 +67,7 @@
         { "before": ["i"], "after": ["k"] },
         { "before": ["h"], "after": ["i"] }
     ],
+    "vim.insertModeKeyBindingsNonRecursive": [{ "before": ["<ESC>"], "after": ["<NOP>"] }],
     "vim.useCtrlKeys": true,
     "vim.hlsearch": true,
     "vim.statusBarColorControl": true,
@@ -80,6 +81,12 @@
     },
     // vim requires line numbers to scroll
     "files.trimTrailingWhitespace": true,
+    "files.exclude": {
+        "**/.git": false,
+        "**/.svn": false,
+        "**/.hg": false,
+        "**/.DS_Store": false
+    },
     "workbench.tree.indent": 20,
     "workbench.tree.renderIndentGuides": "always",
     "workbench.editor.enablePreview": false,
@@ -92,6 +99,14 @@
     "terminal.integrated.defaultProfile.osx": "super-fish",
     //copy text without whitespace
     "editor.copyWithSyntaxHighlighting": true,
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    "tailwindCSS.experimental.classRegex": [
+        ["Classes \\=([^;]*);", "'([^']*)'"],
+        ["Classes \\=([^;]*);", "\"([^\"]*)\""],
+        ["Classes \\=([^;]*);", "\\`([^\\`]*)\\`"]
+    ],
     "files.associations": {
         "*.css": "css",
         "css": "css"
