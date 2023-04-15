@@ -1,29 +1,85 @@
 {
-    "explorer.compactFolders": false,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
-    "typescript.inlayHints.enumMemberValues.enabled": true,
+    "[go]": {
+        "editor.defaultFormatter": "golang.go"
+    },
+    "[java]": {
+        "editor.defaultFormatter": "redhat.java"
+    },
     "[javascript]": {
         "editor.tabSize": 4
+    },
+    "[prisma]": {
+        "editor.defaultFormatter": "Prisma.prisma"
+    },
+    "[python]": {
+        "editor.formatOnType": true
     },
     "[typescript]": {
         "editor.tabSize": 8
     },
-    "editor.fastScrollSensitivity": 3,
+    "bracket-pair-colorizer-2.depreciation-notice": false,
     "breadcrumbs.enabled": true,
     "editor.bracketPairColorization.enabled": true,
-    "emmet.showSuggestionsAsSnippets": true,
-    "editor.snippetSuggestions": "bottom",
-    "prettier.tabWidth": 4,
-    "zenMode.hideTabs": false,
+    "editor.copyWithSyntaxHighlighting": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.fastScrollSensitivity": 3,
     "editor.fontSize": 14,
-    "zenMode.fullScreen": false,
-    "zenMode.centerLayout": false,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.glyphMargin": false,
+    "editor.guides.bracketPairs": "active",
     "editor.minimap.enabled": false,
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    "editor.snippetSuggestions": "bottom",
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "emmet.showSuggestionsAsSnippets": true,
+    "explorer.compactFolders": false,
+    "files.associations": {
+        "*.css": "css",
+        "css": "css"
+    },
+    "files.exclude": {
+        "**/.DS_Store": false,
+        "**/.git": false,
+        "**/.hg": false,
+        "**/.svn": false
+    },
+    "files.trimTrailingWhitespace": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "prettier.printWidth": 150,
+    "prettier.tabWidth": 4,
+    "tailwindCSS.experimental.classRegex": [
+        ["Classes \\=([^;]*);", "'([^']*)'"],
+        ["Classes \\=([^;]*);", "\"([^\"]*)\""],
+        ["Classes \\=([^;]*);", "\\`([^\\`]*)\\`"]
+    ],
+    "terminal.integrated.allowChords": false,
+    "terminal.integrated.defaultProfile.osx": "super-fish",
     "terminal.integrated.enableMultiLinePasteWarning": false,
-    "zenMode.hideLineNumbers": false,
-    //vim config
+    "terminal.integrated.ignoreProcessNames": ["starship", "oh-my-posh", "bash", "zsh", "fish"],
+    "terminal.integrated.profiles.osx": {
+        "super-fish": {
+            "path": "/opt/homebrew/bin/fish"
+        }
+    },
+    "typescript.inlayHints.enumMemberValues.enabled": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindingsNonRecursive": [{ "before": ["<ESC>"], "after": ["<NOP>"] }],
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors": {
+        "insert": "#5f0000",
+        "normal": "#005f5f",
+        "replace": "#000000",
+        "visual": "#5f00af",
+        "visualblock": "#86592d",
+        "visualline": "#005f87"
+    },
+    "vim.useCtrlKeys": true,
     "vim.normalModeKeyBindingsNonRecursive": [
         /*
             default:
@@ -56,7 +112,6 @@
         */
         { "before": ["K"], "after": ["a", "<Enter>", "<ESC>"] }
     ],
-
     "vim.visualModeKeyBindingsNonRecursive": [
         /*
             Similar for Visual Mode too!
@@ -67,70 +122,17 @@
         { "before": ["i"], "after": ["k"] },
         { "before": ["h"], "after": ["i"] }
     ],
-    "vim.insertModeKeyBindingsNonRecursive": [{ "before": ["<ESC>"], "after": ["<NOP>"] }],
-    "vim.useCtrlKeys": true,
-    "vim.hlsearch": true,
-    "vim.statusBarColorControl": true,
-    "vim.statusBarColors": {
-        "normal": "#005f5f",
-        "insert": "#5f0000",
-        "visual": "#5f00af",
-        "visualline": "#005f87",
-        "visualblock": "#86592d",
-        "replace": "#000000"
-    },
-    // vim requires line numbers to scroll
-    "files.trimTrailingWhitespace": true,
-    "files.exclude": {
-        "**/.git": false,
-        "**/.svn": false,
-        "**/.hg": false,
-        "**/.DS_Store": false
-    },
-    "workbench.tree.indent": 20,
-    "workbench.tree.renderIndentGuides": "always",
-    "workbench.editor.enablePreview": false,
-    "terminal.integrated.allowChords": false,
-    "terminal.integrated.profiles.osx": {
-        "super-fish": {
-            "path": "/opt/homebrew/bin/fish"
-        }
-    },
-    "terminal.integrated.defaultProfile.osx": "super-fish",
-    //copy text without whitespace
-    "editor.copyWithSyntaxHighlighting": true,
-    "editor.quickSuggestions": {
-        "strings": true
-    },
-    "tailwindCSS.experimental.classRegex": [
-        ["Classes \\=([^;]*);", "'([^']*)'"],
-        ["Classes \\=([^;]*);", "\"([^\"]*)\""],
-        ["Classes \\=([^;]*);", "\\`([^\\`]*)\\`"]
-    ],
-    "files.associations": {
-        "*.css": "css",
-        "css": "css"
-    },
-    "[prisma]": {
-        "editor.defaultFormatter": "Prisma.prisma"
-    },
-    "editor.unicodeHighlight.nonBasicASCII": false,
-    "terminal.integrated.ignoreProcessNames": ["starship", "oh-my-posh", "bash", "zsh", "fish"],
-    "git.enableSmartCommit": true,
-    "prettier.printWidth": 150,
-    "git.confirmSync": false,
-    "editor.unicodeHighlight.invisibleCharacters": false,
-    "editor.unicodeHighlight.ambiguousCharacters": false,
-    "[go]": {
-        "editor.defaultFormatter": "golang.go"
-    },
-    "[python]": {
-        "editor.formatOnType": true
-    },
     "workbench.colorCustomizations": {
         "statusBar.background": "#5f0000",
-        "statusBar.noFolderBackground": "#5f0000",
-        "statusBar.debuggingBackground": "#5f0000"
+        "statusBar.debuggingBackground": "#5f0000",
+        "statusBar.noFolderBackground": "#5f0000"
     },
-    "bracket-pair-colorizer-2.depreciation-notice": false
+    "workbench.editor.enablePreview": false,
+    "workbench.tree.indent": 20,
+    "workbench.tree.renderIndentGuides": "always",
+    "zenMode.centerLayout": false,
+    "zenMode.fullScreen": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.hideTabs": false,
+    "java.format.comments.enabled": false
 }
