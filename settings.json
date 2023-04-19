@@ -17,6 +17,11 @@
     "[typescript]": {
         "editor.tabSize": 8
     },
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.formatOnSave": true
+    },
+    "rust-analyzer.checkOnSave": true,
     "bracket-pair-colorizer-2.depreciation-notice": false,
     "breadcrumbs.enabled": true,
     "editor.bracketPairColorization.enabled": true,
@@ -69,7 +74,12 @@
     },
     "typescript.inlayHints.enumMemberValues.enabled": true,
     "vim.hlsearch": true,
-    "vim.insertModeKeyBindingsNonRecursive": [{ "before": ["<ESC>"], "after": ["<NOP>"] }],
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<ESC>"],
+            "after": ["<NOP>"]
+        }
+    ],
     "vim.statusBarColorControl": true,
     "vim.statusBarColors": {
         "insert": "#5f0000",
@@ -90,37 +100,80 @@
                     Its really simple! "IJKL" is similar to "WASD"
                     and I mapped "Insert" to "H".
          */
-        { "before": ["h"], "after": ["j"] },
-        { "before": ["j"], "after": ["h"] },
-        { "before": ["k"], "after": ["j"] },
-        { "before": ["i"], "after": ["k"] },
-        { "before": ["h"], "after": ["i"] },
+        {
+            "before": ["h"],
+            "after": ["j"]
+        },
+        {
+            "before": ["j"],
+            "after": ["h"]
+        },
+        {
+            "before": ["k"],
+            "after": ["j"]
+        },
+        {
+            "before": ["i"],
+            "after": ["k"]
+        },
+        {
+            "before": ["h"],
+            "after": ["i"]
+        },
         /*
             Caps Lock + h for inserting a one character
         */
-        { "before": ["<C-h>"], "after": ["i", " ", "<ESC>", "r"] },
+        {
+            "before": ["<C-h>"],
+            "after": ["i", " ", "<ESC>", "r"]
+        },
         /*
             Enter paste w/o moving cursor!
         */
-        { "before": ["<Leader>", "p"], "after": ["p", "`", "["] },
+        {
+            "before": ["<Leader>", "p"],
+            "after": ["p", "`", "["]
+        },
         /*
             Stop highlight!
         */
-        { "before": ["<Leader>", "/"], "commands": [":noh"], "silent": true },
+        {
+            "before": ["<Leader>", "/"],
+            "commands": [":noh"],
+            "silent": true
+        },
         /*
             Add an empty line at cursor without leaving normal mode!
         */
-        { "before": ["K"], "after": ["a", "<Enter>", "<ESC>"] }
+        {
+            "before": ["K"],
+            "after": ["a", "<Enter>", "<ESC>"]
+        }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         /*
             Similar for Visual Mode too!
         */
-        { "before": ["h"], "after": ["j"] },
-        { "before": ["j"], "after": ["h"] },
-        { "before": ["k"], "after": ["j"] },
-        { "before": ["i"], "after": ["k"] },
-        { "before": ["h"], "after": ["i"] }
+        {
+            "before": ["h"],
+            "after": ["j"]
+        },
+        {
+            "before": ["j"],
+            "after": ["h"]
+        },
+        {
+            "before": ["k"],
+            "after": ["j"]
+        },
+        {
+            "before": ["i"],
+            "after": ["k"]
+        },
+        {
+            "before": ["h"],
+            "after": ["i"]
+        }
     ],
     "workbench.colorCustomizations": {
         "statusBar.background": "#5f0000",
@@ -134,5 +187,7 @@
     "zenMode.fullScreen": false,
     "zenMode.hideLineNumbers": false,
     "zenMode.hideTabs": false,
-    "java.format.comments.enabled": false
+    "java.format.comments.enabled": false,
+    "files.autoSave": "afterDelay",
+    "window.zoomLevel": -1
 }
