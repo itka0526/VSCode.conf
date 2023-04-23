@@ -275,5 +275,51 @@
             "commands": ["scrollLineUp", "scrollLineUp", "scrollLineUp"]
         },
         "when": "textInputFocus"
+    },
+    {
+        "key": "alt+\\",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+k cmd+i",
+        "command": "-editor.action.showHover",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+,",
+        "command": "editor.action.inlineSuggest.showPrevious",
+        "when": "inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+        "key": "alt+[",
+        "command": "-editor.action.inlineSuggest.showPrevious",
+        "when": "inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+        "key": "alt+.",
+        "command": "editor.action.inlineSuggest.showNext",
+        "when": "inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+        "key": "alt+]",
+        "command": "-editor.action.inlineSuggest.showNext",
+        "when": "inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+        "key": "alt+]",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "shift+cmd+]",
+        "command": "-workbench.action.nextEditor"
+    },
+    {
+        "key": "alt+[",
+        "command": "workbench.action.previousEditor"
+    },
+    {
+        "key": "shift+cmd+[",
+        "command": "-workbench.action.previousEditor"
     }
 ]

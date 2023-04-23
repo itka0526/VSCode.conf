@@ -22,6 +22,7 @@
         "editor.formatOnSave": true
     },
     "rust-analyzer.checkOnSave": true,
+    "rust-analyzer.lens.implementations.enable": false,
     "bracket-pair-colorizer-2.depreciation-notice": false,
     "breadcrumbs.enabled": true,
     "editor.bracketPairColorization.enabled": true,
@@ -188,6 +189,5 @@
     "zenMode.hideLineNumbers": false,
     "zenMode.hideTabs": false,
     "java.format.comments.enabled": false,
-    "files.autoSave": "afterDelay",
-    "window.zoomLevel": -1
+    "files.autoSave": "afterDelay"
 }
