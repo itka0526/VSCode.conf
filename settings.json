@@ -21,6 +21,15 @@
         "editor.defaultFormatter": "rust-lang.rust-analyzer",
         "editor.formatOnSave": true
     },
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true,
+        "rules": {
+            "*.mutable": {
+                "underline": false
+            }
+        }
+    },
+    "rust-analyzer.inlayHints.typeHints.enable": false,
     "rust-analyzer.checkOnSave": true,
     "rust-analyzer.lens.implementations.enable": false,
     "bracket-pair-colorizer-2.depreciation-notice": false,
@@ -54,6 +63,7 @@
         "**/.hg": false,
         "**/.svn": false
     },
+
     "files.trimTrailingWhitespace": true,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
@@ -189,5 +199,7 @@
     "zenMode.hideLineNumbers": false,
     "zenMode.hideTabs": false,
     "java.format.comments.enabled": false,
+    "java.format.settings.url": "/Users/itgelt/Library/Application Support/Code/User/java-formatting.xml",
+    "java.format.settings.profile": "style",
     "files.autoSave": "afterDelay"
 }
