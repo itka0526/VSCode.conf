@@ -12,6 +12,7 @@
         "editor.defaultFormatter": "Prisma.prisma"
     },
     "[python]": {
+        "editor.defaultFormatter": "ms-python.python",
         "editor.formatOnType": true
     },
     "[typescript]": {
@@ -19,6 +20,10 @@
     },
     "[rust]": {
         "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.formatOnSave": true
+    },
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools",
         "editor.formatOnSave": true
     },
     "editor.semanticTokenColorCustomizations": {
@@ -63,12 +68,13 @@
         "**/.hg": false,
         "**/.svn": false
     },
-
     "files.trimTrailingWhitespace": true,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
     "prettier.printWidth": 150,
     "prettier.tabWidth": 4,
+    "python.formatting.provider": "autopep8",
+    "python.formatting.autopep8Args": ["--aggressive", "--aggressive", "--indent '[ ]'"],
     "tailwindCSS.experimental.classRegex": [
         ["Classes \\=([^;]*);", "'([^']*)'"],
         ["Classes \\=([^;]*);", "\"([^\"]*)\""],
@@ -84,108 +90,6 @@
         }
     },
     "typescript.inlayHints.enumMemberValues.enabled": true,
-    "vim.hlsearch": true,
-    "vim.insertModeKeyBindingsNonRecursive": [
-        {
-            "before": ["<ESC>"],
-            "after": ["<NOP>"]
-        }
-    ],
-    "vim.statusBarColorControl": true,
-    "vim.statusBarColors": {
-        "insert": "#5f0000",
-        "normal": "#005f5f",
-        "replace": "#000000",
-        "visual": "#5f00af",
-        "visualblock": "#86592d",
-        "visualline": "#005f87"
-    },
-    "vim.useCtrlKeys": true,
-    "vim.normalModeKeyBindingsNonRecursive": [
-        /*
-            default:
-                          ↑
-                    ← h j k l →
-                        ↓
-            custom:
-                    Its really simple! "IJKL" is similar to "WASD"
-                    and I mapped "Insert" to "H".
-         */
-        {
-            "before": ["h"],
-            "after": ["j"]
-        },
-        {
-            "before": ["j"],
-            "after": ["h"]
-        },
-        {
-            "before": ["k"],
-            "after": ["j"]
-        },
-        {
-            "before": ["i"],
-            "after": ["k"]
-        },
-        {
-            "before": ["h"],
-            "after": ["i"]
-        },
-        /*
-            Caps Lock + h for inserting a one character
-        */
-        {
-            "before": ["<C-h>"],
-            "after": ["i", " ", "<ESC>", "r"]
-        },
-        /*
-            Enter paste w/o moving cursor!
-        */
-        {
-            "before": ["<Leader>", "p"],
-            "after": ["p", "`", "["]
-        },
-        /*
-            Stop highlight!
-        */
-        {
-            "before": ["<Leader>", "/"],
-            "commands": [":noh"],
-            "silent": true
-        },
-        /*
-            Add an empty line at cursor without leaving normal mode!
-        */
-        {
-            "before": ["K"],
-            "after": ["a", "<Enter>", "<ESC>"]
-        }
-    ],
-    "vim.visualModeKeyBindingsNonRecursive": [
-        /*
-            Similar for Visual Mode too!
-        */
-        {
-            "before": ["h"],
-            "after": ["j"]
-        },
-        {
-            "before": ["j"],
-            "after": ["h"]
-        },
-        {
-            "before": ["k"],
-            "after": ["j"]
-        },
-        {
-            "before": ["i"],
-            "after": ["k"]
-        },
-        {
-            "before": ["h"],
-            "after": ["i"]
-        }
-    ],
     "workbench.colorCustomizations": {
         "statusBar.background": "#5f0000",
         "statusBar.debuggingBackground": "#5f0000",
@@ -201,5 +105,11 @@
     "java.format.comments.enabled": false,
     "java.format.settings.url": "/Users/itgelt/Library/Application Support/Code/User/java-formatting.xml",
     "java.format.settings.profile": "style",
-    "files.autoSave": "afterDelay"
+    "notebook.formatOnSave.enabled": true,
+    "less.hover.documentation": false,
+    "files.autoSave": "afterDelay",
+    "python.formatting.autopep8Path": "/opt/homebrew/anaconda3/bin/autopep8",
+    "terminal.integrated.inheritEnv": false,
+    "notebook.output.textLineLimit": 60,
+    "window.zoomLevel": 1
 }

@@ -236,11 +236,6 @@
         "when": "terminal.active"
     },
     {
-        "key": "alt+y",
-        "command": "editor.action.clipboardCopyAction",
-        "when": "editorTextFocus"
-    },
-    {
         "key": "alt+'",
         "command": "scrollLineDown",
         "when": "textInputFocus"
@@ -282,6 +277,21 @@
         "when": "editorTextFocus"
     },
     {
+        "key": "alt+\\",
+        "command": "editor.action.escapeFocusHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "alt+;",
+        "command": "editor.action.scrollUpHover",
+        "when": "editorHoverFocused && editorHoverVisible"
+    },
+    {
+        "key": "alt+'",
+        "command": "editor.action.scrollDownHover",
+        "when": "editorHoverFocused && editorHoverVisible"
+    },
+    {
         "key": "cmd+k cmd+i",
         "command": "-editor.action.showHover",
         "when": "editorTextFocus"
@@ -321,5 +331,64 @@
     {
         "key": "shift+cmd+[",
         "command": "-workbench.action.previousEditor"
+    },
+    {
+        "key": "alt+w",
+        "command": "jupyter.notebookeditor.runallcells",
+        "when": "notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0 || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelSourceCount > 0"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-notebook.cell.execute",
+        "when": "notebookCellListFocused && notebookMissingKernelExtension && !notebookCellExecuting && notebookCellType == 'code' || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelCount > 0 || notebookCellListFocused && !notebookCellExecuting && notebookCellType == 'code' && notebookKernelSourceCount > 0"
+    },
+    {
+        "key": "alt+b",
+        "command": "notebook.cell.insertCodeCellBelow",
+        "when": "notebookCellListFocused"
+    },
+    {
+        "key": "cmd+enter",
+        "command": "-notebook.cell.insertCodeCellBelow",
+        "when": "notebookCellListFocused && !inputFocus"
+    },
+    {
+        "key": "alt+m",
+        "command": "notebook.cell.insertMarkdownCellBelow"
+    },
+    {
+        "key": "alt+g",
+        "command": "notebook.cell.delete",
+        "when": "notebookEditorFocused "
+    },
+    {
+        "key": "cmd+backspace",
+        "command": "-notebook.cell.delete",
+        "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+        "key": "alt+h",
+        "command": "-testing.toggleTestingPeekHistory",
+        "when": "testing.isPeekVisible"
+    },
+    {
+        "key": "alt+h",
+        "command": "notebook.focusNextEditor",
+        "when": "config.notebook.navigation.allowNavigateToSurroundingCells && editorTextFocus && inputFocus && notebookEditorFocused && notebookEditorCursorAtBoundary != 'none' && notebookEditorCursorAtBoundary != 'top'"
+    },
+    {
+        "key": "down",
+        "command": "-notebook.focusNextEditor",
+        "when": "config.notebook.navigation.allowNavigateToSurroundingCells && editorTextFocus && inputFocus && notebookEditorFocused && notebookEditorCursorAtBoundary != 'none' && notebookEditorCursorAtBoundary != 'top'"
+    },
+    {
+        "key": "alt+y",
+        "command": "notebook.focusPreviousEditor",
+        "when": "config.notebook.navigation.allowNavigateToSurroundingCells && editorTextFocus && inputFocus && notebookEditorFocused && notebookEditorCursorAtBoundary != 'bottom' && notebookEditorCursorAtBoundary != 'none'"
+    },
+    {
+        "key": "up",
+        "command": "-notebook.focusPreviousEditor",
+        "when": "config.notebook.navigation.allowNavigateToSurroundingCells && editorTextFocus && inputFocus && notebookEditorFocused && notebookEditorCursorAtBoundary != 'bottom' && notebookEditorCursorAtBoundary != 'none'"
     }
 ]
